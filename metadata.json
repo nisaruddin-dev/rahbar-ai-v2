@@ -1,0 +1,74 @@
+[
+  {
+    "vector_id": 0,
+    "text": "Minimum 60% aggregate marks each in SSC and HSSC OR equivalent exams (as per IBCC equivalence).",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Eligibility",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/",
+      "verification_state": "VERIFIED"
+    }
+  },
+  {
+    "vector_id": 1,
+    "text": "Pre-Engineering group | Engineering and Computing Programmes\nPre-Medical group | Computing Programmes\nMathematics, Physics and Computer Science as major subjects | Engineering and Computing Programmes\nMathematics, Statistics and Computer Science as major subjects | Computing Programmes\nPre-Medical with additional Mathematics | All Programmes\nMathematics & Physics as (two of three) major subjects | Computing Programmes\nMathematics as one of the major subject | Computing Programmes",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Eligible Groups",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/academic-qualification-required-for-different-ug-progammes/",
+      "verification_state": "VERIFIED"
+    }
+  },
+  {
+    "vector_id": 2,
+    "text": "NUST Entry Test | 75 %\nSSC / O Level / equivalent | 10 %\nHSSC (Part-1) / HSSC / A level * / Equivalent / DAE | 15 %",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Merit Formula",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/merit-criteria-for-admission-on-net-basis/",
+      "verification_state": "VERIFIED"
+    }
+  },
+  {
+    "vector_id": 3,
+    "text": "NUST Entry Test (Series-4) Application Form\nLast Date: 18 Jun 2026\nRegistration Closed",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Deadline",
+      "source_url": "https://ugadmissions.nust.edu.pk/default.aspx",
+      "verification_state": "VERIFIED"
+    }
+  },
+  {
+    "vector_id": 4,
+    "text": "Candidates of FA/FSc stream can apply for NET on the basis of FA/FSc Part-I but confirmation of admission is subject to provision of FA/FSc certificate or Detailed Marks Certificate with required group/subjects and percentage.",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Part-I Application",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/",
+      "verification_state": "VERIFIED"
+    }
+  },
+  {
+    "vector_id": 5,
+    "text": "While applying for admission, possession of Computerized National Identity Card (CNIC) / Form ‘B’ or NICOP is mandatory. Online registration system does not require attachment of documents / credentials. However, the same will be required for verification during selection and admission process of selected candidates.",
+    "metadata": {
+      "university": "NUST",
+      "cycle": "2026",
+      "program": "BS Computer Science",
+      "section": "Documents",
+      "source_url": "https://nust.edu.pk/faqs/what-documents-are-essentially-required-to-be-submitted-while-applying-for-admission/",
+      "verification_state": "VERIFIED"
+    }
+  }
+]

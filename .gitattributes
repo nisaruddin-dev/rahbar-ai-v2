@@ -1,0 +1,3 @@
+faiss.index binary
+*.faiss binary
+*.pdf binary
