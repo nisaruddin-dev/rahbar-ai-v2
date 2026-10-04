@@ -34,61 +34,62 @@ Every decision is traceable to an official source URL. Every number is computed 
 ---
 
 ## Architecture
-STUDENT QUERY + PROFILE
-|
-v
-+-------------------+
-| AGENT | run_agent(query, profile)
-| (custom loop) | - Max 4 tool calls
-+---------+---------+ - Duplicate detection
-| - 25 s wall-clock cap
-|
-| selects tools by keyword intent
-|
-+----------------+----------------+
-| | |
-v v v
-+-----------------+ +-----------------+ +-----------------+
-| search_ | | calculate_ | | check_ |
-| universities | | aggregate | | deadline |
-+--------+--------+ +--------+--------+ +--------+--------+
-| | |
-v v v
-+-----------------+ +-----------------+ +-----------------+
-| RAG retrieval | | RULES ENGINE | | RULES ENGINE |
-+--------+--------+ +--------+--------+ +--------+--------+
-| | |
-+-------------------+-------------------+
-|
-v
-+-----------------------------+
-| DATA (data/universities.py) |
-| FORMULAS |
-| ELIGIBILITY_RULES |
-| DEADLINES |
-+--------------+--------------+
-|
-v
-+-----------------------------+
-| LLM (explanation only; |
-| does NOT decide) |
-+--------------+--------------+
-|
-v
-+-----------------------------+
-| ANTI-HALLUCINATION GATE |
-| YES + no verified source |
-| -> NOT_YET_VERIFIED |
-+--------------+--------------+
-|
-v
-+-----------------------------+
-| AgentResponse |
-| status - reason - evidence |
-| actions - confidence - trace|
-+-----------------------------+
 
-text
+```text
+STUDENT QUERY + PROFILE
+        |
+        v
++-------------------+
+|   AGENT           |  run_agent(query, profile)
+|   (custom loop)   |  - Max 4 tool calls
++---------+---------+  - Duplicate detection
+          |            - 25 s wall-clock cap
+          |
+          |  selects tools by keyword intent
+          |
+          +----------------+----------------+
+          |                |                |
+          v                v                v
++-----------------+ +-----------------+ +-----------------+
+| search_         | | calculate_      | | check_          |
+| universities    | | aggregate       | | deadline        |
++--------+--------+ +--------+--------+ +--------+--------+
+         |                   |                   |
+         v                   v                   v
++-----------------+ +-----------------+ +-----------------+
+| RAG retrieval   | | RULES ENGINE    | | RULES ENGINE    |
++--------+--------+ +--------+--------+ +--------+--------+
+         |                   |                   |
+         +-------------------+-------------------+
+                             |
+                             v
+                +-----------------------------+
+                | DATA (data/universities.py) |
+                | FORMULAS                    |
+                | ELIGIBILITY_RULES           |
+                | DEADLINES                   |
+                +--------------+--------------+
+                               |
+                               v
+                +-----------------------------+
+                | LLM (explanation only;      |
+                |      does NOT decide)       |
+                +--------------+--------------+
+                               |
+                               v
+                +-----------------------------+
+                | ANTI-HALLUCINATION GATE     |
+                | YES + no verified source    |
+                |      -> NOT_YET_VERIFIED    |
+                +--------------+--------------+
+                               |
+                               v
+                +-----------------------------+
+                | AgentResponse               |
+                | status - reason - evidence  |
+                | actions - confidence - trace|
+                +-----------------------------+
+```
 
 **Design principle:** the agent reasons about *what to do*; it cannot manufacture what the university has not verified.
 
